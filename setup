@@ -1,0 +1,15 @@
+#!/bin/bash
+# interview-hour setup
+# Installs the /interview-hour skill for Claude Code
+
+set -e
+
+SKILL_DIR="$HOME/.claude/skills/interview-hour"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+echo "Installing interview-hour skill..."
+
+mkdir -p "$SKILL_DIR"
+cp "$SCRIPT_DIR/SKILL.md" "$SKILL_DIR/SKILL.md"
+
+echo "Done. Restart Claude Code and use /interview-hour to begin."
